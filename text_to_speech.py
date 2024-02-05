@@ -1,5 +1,5 @@
 import os
-import playsound        # pip install playsound
+import playsound        # pip install --upgrade setuptools wheel  # pip install playsound
 from gtts import gTTS   # pip install gTTS
 
 
