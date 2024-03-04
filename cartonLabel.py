@@ -86,7 +86,7 @@ class DemoApp(MDApp):
             for x in range(start, end+1):
                 xml = (''
                     '<Etikett bestellnr="450065704">\n'
-                        '<artsnr>'+str(size)+'</artsnr>\n'
+                        '<artsnr>'+str(article)+'</artsnr>\n'
                         '<artikelbez>softshell jacket, sky captain blue, S</artikelbez>\n'
                         '<soko>00</soko>\n'
                         '<produktlinie>10</produktlinie>\n'
