@@ -4,6 +4,9 @@ from kivy.lang import Builder
 import requests
 from pathlib import Path
 
+# pip install pyinstaller
+# pyinstaller --onefile -w 'main.py'
+
 kv = """
 ScreenManager:
     Screen:
