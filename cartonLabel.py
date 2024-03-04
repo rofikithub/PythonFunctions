@@ -76,7 +76,7 @@ class DemoApp(MDApp):
 
 
     def download_xml_file(self,obj):
-            content = '<?xml version="1.0" encoding="utf-8"?>\n<Kartonetiketten xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:de.ttg:intex:kartonetiketten:2014-09-04">'
+            content = '<?xml version="1.0" encoding="utf-8"?>\n<Kartonetiketten xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:de.ttg:intex:kartonetiketten:2014-09-04">\n'
             article  = int(self.string.ids.article.text)
             color    = int(self.string.ids.color.text)
             size     = str(self.string.ids.size.text)
@@ -87,7 +87,7 @@ class DemoApp(MDApp):
             start = int(self.string.ids.start.text)
             end   = int(self.string.ids.end.text)
             for x in range(start, end+1):
-                xml = (''
+                xml = ('\n'
                     '<Etikett bestellnr="450065704">\n'
                         '<artsnr>'+str(article)+'</artsnr>\n'
                         '<artikelbez>softshell jacket, sky captain blue, S</artikelbez>\n'
@@ -107,8 +107,8 @@ class DemoApp(MDApp):
                     '</Etikett>\n'
                       )
                 content = content + xml
-                content = content + '\n</Kartonetiketten>'
 
+            content = content + '\n</Kartonetiketten>'
             with open('datafile.xml', 'w') as file:
                 file.write(content)
 
